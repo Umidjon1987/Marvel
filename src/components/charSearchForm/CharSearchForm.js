@@ -12,7 +12,7 @@ const CharSearchForm = () => {
     const [char, setChar] = useState(null);
     const {loading, error, getCharacterByName, clearError} = useMarvelService();
 
-    const onCharLaaded = (char) => {
+    const onCharLoaded = (char) => {
         setChar(char);
     }
 
@@ -20,7 +20,7 @@ const CharSearchForm = () => {
         clearError();
 
         getCharacterByName(name)
-            .then(onCharLaaded);
+            .then(onCharLoaded);
     }
 
     const errorMessage = error ? <div className="char__search-critical-error"><ErrorMessage /></div> : null;
