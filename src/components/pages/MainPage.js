@@ -17,6 +17,7 @@ const MainPage = () => {
         setChar(id);
 
     }
+    console.log('render2');
 
     return(
         <>
